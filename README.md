@@ -1,4 +1,4 @@
-# Roadmap backed develope
+# Roadmap backed developer
 NET/C#
 WEB
 База данных
