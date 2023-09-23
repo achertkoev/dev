@@ -1,9 +1,7 @@
 # Roadmap backed developer
-NET/C#
-WEB
-База данных
-Алгоритмы и структура данных
-Архитектура
-System Design
-Паттерны
-Multithreading
+- NET/C#
+- WEB
+- Database
+- Data Structures and Algorithms
+- System Design
+- Design patterns
