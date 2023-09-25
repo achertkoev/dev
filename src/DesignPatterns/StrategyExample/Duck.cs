@@ -4,37 +4,54 @@
     /// <summary>
     /// Утка
     /// </summary>
-    public abstract class Duck
+    public abstract class Duck 
     {
-        public string Name { get; }
+        protected string Name { get; }
+        private IQuackBehavior _quackBehavior;
+        private IFlyBehavior _flyBehavior;
 
-        public Duck(string name)
+        protected Duck(string name)
         {
             Name = name;
         }
-    
+
         /// <summary>
-        /// Утка крякает
+        /// Выполнить кряк
         /// </summary>
-        /// <returns></returns>
-        public void Quack()
+        public void PerformQuack()
         {
-            Console.WriteLine("умею крякать");
+            if(_quackBehavior is not null)
+                _quackBehavior.Quack();
+        }
+        
+        /// <summary>
+        /// Выполнить полет
+        /// </summary>
+        public void PerformFly()
+        {
+            if(_flyBehavior is not null)
+                _flyBehavior.Fly();
         }
 
         /// <summary>
-        /// Утка плавает
+        /// Установить поведения кряка
         /// </summary>
-        /// <returns></returns>
-        public void Swim()
-        {
-            Console.WriteLine("умею плавать");
-        }
-
+        /// <param name="quackBehavior"></param>
+        public void SetQuackBehavior(IQuackBehavior quackBehavior) => _quackBehavior = quackBehavior;
+        
+        /// <summary>
+        /// Установить поведение полета
+        /// </summary>
+        /// <param name="flyBehavior"></param>
+        public void SetFlyBehavior(IFlyBehavior flyBehavior) => _flyBehavior = flyBehavior;
+        
         /// <summary>
         /// Отображение утки
         /// </summary>
         /// <returns></returns>
-        public abstract void Display();
+        public virtual void Display()
+        {
+            Console.WriteLine($"Я - {Name}");
+        }
     }
 }

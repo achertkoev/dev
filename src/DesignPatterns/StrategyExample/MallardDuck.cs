@@ -7,12 +7,11 @@
     {
         public MallardDuck(string name) : base(name)
         {
-            
         }
-   
+
         public override void Display()
         {
-            Console.WriteLine($"Я - {Name}");
+            Console.WriteLine($"Меня зовут {base.Name}");
         }
     }
 }

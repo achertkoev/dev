@@ -7,12 +7,7 @@
     {
         public RedheadDuck(string name) : base(name)
         {
-            
-        }
-        
-        public override void Display()
-        {
-            Console.WriteLine($"Я - {Name}");
+
         }
     }
 }
