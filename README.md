@@ -4,4 +4,4 @@
 - Database
 - Data Structures and Algorithms
 - System Design
-- Design patterns
+- [Design patterns](../dev/docs/DesignPatterns/DesignPatterns.md)
