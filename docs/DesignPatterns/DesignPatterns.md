@@ -35,6 +35,6 @@
 - Хранитель (Memento)
 - Наблюдатель (Obsever)
 - Состояние (State)
-- [Стратегия (Strategy)](/DesignPatterns/StrategyPattern.md)
+- [Стратегия (Strategy)](../DesignPatterns/StrategyPattern.md)
 - Шаблонный метод (Template method)
 - Посетитель (Visitor)
