@@ -1,3 +1,4 @@
+[Clean Code](/docs/SoftwareDesign&Architecture/CleanCode/CleanCode.md)
 
 # Чистые функции (Pure Functions)
 
