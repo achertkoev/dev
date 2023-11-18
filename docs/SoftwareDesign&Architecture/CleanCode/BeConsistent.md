@@ -1,4 +1,4 @@
-[Clean Code]()
+[Clean Code](/docs/SoftwareDesign&Architecture/CleanCode/CleanCode.md)
 
 # Быть последовательным (Be Consistent)
 
