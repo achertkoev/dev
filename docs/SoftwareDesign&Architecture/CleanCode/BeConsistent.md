@@ -1,4 +1,4 @@
-[Clean Code](/docs/)
+[Clean Code]()
 
 # Быть последовательным (Be Consistent)
 
