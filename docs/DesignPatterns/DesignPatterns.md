@@ -40,3 +40,4 @@
 - [Стратегия (Strategy)](../DesignPatterns/StrategyPattern.md)
 - Шаблонный метод (Template method)
 - Посетитель (Visitor)
+- [Null object]
