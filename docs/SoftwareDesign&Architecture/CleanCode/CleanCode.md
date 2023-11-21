@@ -19,6 +19,7 @@
  - [Чистые функции](/docs/SoftwareDesign&Architecture/CleanCode/PureFunctions.md)
  - [Минимизируйте цикломатическую сложность](/docs/SoftwareDesign&Architecture/CleanCode/minimize-cyclomatic-complexity.md)
  - [Избегайте передачи логических значений и NULL](/docs/SoftwareDesign&Architecture/CleanCode/avoid-passing-nulls-booleans.md)
+ - [Держите код фреймворка на расстоянии](/docs/SoftwareDesign&Architecture/CleanCode/keep-framework-code-distant.md)
  - Обработка ошибок: код должен обрабатывать ошибки последовательным и предсказуемым образом.
  - Тестирование: код должен быть тестируемым и иметь высокое тестовое покрытие.
  - Повторное использование: код должен быть так спроектирован, чтобы его можно было использовать повторно, и он был модульным.
