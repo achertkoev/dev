@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-var romanNumber="MCMXCIV";
+var romanNumber="IVI";
 var sol = new RomanToInteger();
 var result = sol.RomanToInt(romanNumber);
 Console.WriteLine($"""Римское число "{romanNumber}" в десятичной системе "{result}". """);
@@ -22,20 +22,19 @@ public class RomanToInteger
 
     public int RomanToInt(string s)
     {
-
         var result = 0;
 
         if (s.Length == 1)
             return alphabet[s[0]];
 
-        for (int i = s.Length - 1; i > 0; i--)
+        for (int i = 0; i < s.Length-1; i++)
         {
-            result += Calc(s[i - 1], s[i]);
-
-            i--;
-            if (i == 1)
-                result += alphabet[s[i - 1]];
-
+            if(alphabet[s[i]] < alphabet[s[i+1]]){
+                Console.WriteLine($"{alphabet[s[i+1]] } - {alphabet[s[i]]}");
+                result += alphabet[s[i+1]] - alphabet[s[i]];
+            }else{
+                //todo: реализовать дальше
+            }
         }
 
         return result;
