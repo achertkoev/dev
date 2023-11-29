@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-var romanNumber="IVI";
+var romanNumber = "IVI";
 var sol = new RomanToInteger();
 var result = sol.RomanToInt(romanNumber);
 Console.WriteLine($"""Римское число "{romanNumber}" в десятичной системе "{result}". """);
@@ -9,7 +9,7 @@ Console.WriteLine($"""Римское число "{romanNumber}" в десяти�
 
 public class RomanToInteger
 {
-    Dictionary<char, int> alphabet = new Dictionary<char, int>()
+    Dictionary<char, int> romans = new Dictionary<char, int>()
     {
         {'I', 1},
         {'V', 5},
@@ -24,34 +24,28 @@ public class RomanToInteger
     {
         var result = 0;
 
-        if (s.Length == 1)
-            return alphabet[s[0]];
-
-        for (int i = 0; i < s.Length-1; i++)
+        for (int i = 0; i < s.Length; i++)
         {
-            if(alphabet[s[i]] < alphabet[s[i+1]]){
-                Console.WriteLine($"{alphabet[s[i+1]] } - {alphabet[s[i]]}");
-                result += alphabet[s[i+1]] - alphabet[s[i]];
-            }else{
-                //todo: реализовать дальше
+            if (i == s.Length - 1)
+            {
+                result += romans[s[i]];
+                Console.WriteLine($"{s[i]}({romans[s[i]]})");
+            }
+            else
+            {
+                if (romans[s[i]] < romans[s[i + 1]])
+                {
+
+                    result += romans[s[i + 1]] - romans[s[i]];
+                    i++;
+                }
+                else
+                {
+                    result += romans[s[i]];
+                }
             }
         }
 
         return result;
-    }
-
-    int Calc(char left, char right)
-    {
-        var leftValue = alphabet[left];
-        var rightValue = alphabet[right];
-        if (leftValue >= rightValue)
-        {
-            return leftValue + rightValue;
-        }
-        else
-        {
-            return rightValue - leftValue;
-        }
-
     }
 }
